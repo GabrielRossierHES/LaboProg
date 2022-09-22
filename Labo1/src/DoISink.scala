@@ -1,5 +1,5 @@
 object DoISink extends App{
-  println("Hello to Do I Sink Program :D ")
+  println("Welcome to Do I Sink Program :D ")
   print("Please enter outer sphere radius (in cm): ")
 
   val radius : Double = Input.readDouble()
@@ -17,17 +17,13 @@ object DoISink extends App{
 
   val density : Double = Input.readDouble()
 
-
-  val sphereSurface : Double = 4.0 * math.Pi * math.pow(radius,2)
-
-
-  val totDensity : Double = (density*emptyVolume) / volume
+  val densityByVolume : Double = (density*emptyVolume) / volume
 
 
-  if(totDensity > 1.0){
-    println("The total density is: " + totDensity + " g/cm3 the object sink")
+  if(densityByVolume > 1.0){
+    println("The total density is: " + densityByVolume + " g/cm3 the object sink")
   }else{
-    println("The total density is: " + totDensity + " g/cm3 the object float")
+    println("The total density is: " + densityByVolume + " g/cm3 the object float")
 
   }
 
